@@ -29,8 +29,8 @@ router = routers.DefaultRouter()
 router.register("movies", MovieViewSet)
 
 urlpatterns = [
-    path("cinemahalls/", cinema_hall_list, name="cinema-hall-list"),
-    path("cinemahalls/<int:pk>/", cinema_hall_detail, name="cinema-detail"),
+    path("cinema_halls/", cinema_hall_list, name="cinema-hall-list"),
+    path("cinema_halls/<int:pk>/", cinema_hall_detail, name="cinema-detail"),
     path("genres/", GenreList.as_view(), name="genre-list"),
     path("genres/<int:pk>/", GenreDetail.as_view(), name="genre-detail"),
     path("actors/", ActorList.as_view(), name="actor-list"),
