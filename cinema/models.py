@@ -1,12 +1,14 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
 class Actor(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
 
+
 class Genre(models.Model):
-    name = models.CharField(max_length=255,  unique=True)
+    name = models.CharField(max_length=255, unique=True)
 
     def __str__(self) -> str:
         return self.name
@@ -19,6 +21,7 @@ class CinemaHall(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
 
 class Movie(models.Model):
     title = models.CharField(max_length=255)
